@@ -45,15 +45,15 @@ let negatives = [];
 let zeroes = [];
 for (let i=0; i<supplyChanges.length; i++) {
   if (supplyChanges[i]>0) {
-    positives[i] = supplyChanges[i];
+    positives.push(supplyChanges[i]);
     console.log('positives: ',supplyChanges[i]);
   }
   else if (supplyChanges[i]<0) {
-    negatives[i] = supplyChanges[i];
+    negatives.push(supplyChanges[i]);
     console.log('negatives: ',supplyChanges[i]);
   }
-  else if (supplyChanges[i]=0) {
-    zeroes[i] = supplyChanges[i];
+  else if (supplyChanges[i]==0) {
+    zeroes.push(supplyChanges[i]);
     console.log('zeroes: ',supplyChanges[i]);
   }
 };
@@ -68,32 +68,33 @@ console.log('zeroes array: ',zeroes);
 //    'negatives', and 'zeroes', create three new arrays named 'stretchPositives',
 //    'stretchNegatives', and 'stretchZeroes'. 
 console.log('7. Looping through supplyChanges to populate more arrays with positive, negative, and zero values:');
-/*let positives = [];
-let negatives = [];
-let zeroes = [];
-for (value of supplyChanges) {
-  if (value>0) {
-    positives[value];
+let stretchPositives = [];
+let stretchNegatives = [];
+let stretchZeroes = [];
+for (let value of supplyChanges) {
+    if (value>0) {
+    stretchPositives.push(value);
     console.log('positives: ',value);
   }
   else if (value<0) {
-    negatives[value];
+    stretchNegatives.push(value);
     console.log('negatives: ',value);
   }
-  else if (value=0) {
-    zeroes[value];
+  else if (value==0) {
+    stretchZeroes.push(value);
     console.log('zeroes: ',value);
   }
 };
-console.log('positives array: ',positives);
-console.log('negatives array: ',negatives);
-console.log('zeroes array: ',zeroes);
-*/
+console.log('positives array: ',stretchPositives);
+console.log('negatives array: ',stretchNegatives);
+console.log('zeroes array: ',stretchZeroes);
+
 
 // 8. Create a variable called 'totalParts' and assign it a value of 0.
 //    Then, write a loop that adds each value of the 'supplyChanges'
 //    array to the 'totalParts' variable.
 console.log('8. Looping through supplyChanges to calculate the sum:');
+let totalParts = 0;
 
 
 // 9. We have a large stash of parts in our warehouse that we 
