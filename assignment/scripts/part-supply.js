@@ -95,7 +95,10 @@ console.log('zeroes array: ',stretchZeroes);
 //    array to the 'totalParts' variable.
 console.log('8. Looping through supplyChanges to calculate the sum:');
 let totalParts = 0;
-
+for (let i=0; i<supplyChanges.length; i++) {
+  totalParts = totalParts + supplyChanges[i];
+}
+console.log('total parts: ',totalParts);
 
 // 9. We have a large stash of parts in our warehouse that we 
 //    need to box up and get ready for shipment. There are 572
@@ -109,8 +112,14 @@ let totalParts = 0;
 //    "left over," and the value of 'boxesFilled' should reflect
 //    how many boxes were filled.
 console.log('9. Filling boxes with a "while" loop');
-
-
+let parts = 572;
+let boxesFilled = 0;
+while (parts%7 && parts>=7) {
+  parts -= 7;
+  boxesFilled += 1;
+}
+console.log('parts: ',parts);
+console.log('boxed filled: ',boxesFilled);
 
 
 // DO NOT MODIFY
